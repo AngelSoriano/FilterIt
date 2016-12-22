@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,
+class CameraViewController: UIViewController,
     UIImagePickerControllerDelegate,
     UINavigationControllerDelegate{
     
