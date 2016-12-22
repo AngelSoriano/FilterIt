@@ -10,5 +10,4 @@ import UIKit
 
 protocol FilterSample {
     var filter:CIFilter {get}
-    init(filter:CIFilter)
 }

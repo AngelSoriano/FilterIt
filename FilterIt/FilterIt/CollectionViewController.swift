@@ -17,19 +17,6 @@ class CollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        for _ in 1...10 {
-            let aRand = CGFloat(arc4random_uniform(191) + 5)
-            let radRand = (aRand / 100.0) * CGFloat.pi
-            let tempImg = CIImage(image: pic)
-            let tempFilter = CIFilter(name: "CIHueAdjust")
-            tempFilter?.setDefaults()
-            tempFilter?.setValue(tempImg, forKey: "inputImage")
-            tempFilter?.setValue(CGFloat(radRand), forKey: "inputAngle")
-            let filteredImg = tempFilter?.value(forKey: "outputImage") as! CIImage
-            let filteredUIImage = UIImage(cgImage: CIContext(options: nil).createCGImage(filteredImg, from: filteredImg.extent)!)
-            filterArr.append(filteredUIImage)
-         }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -51,6 +38,8 @@ class CollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FilterCell
         cell.imageCell?.image = pic
+        cell.setFilter()
+        filterArr.append(cell.imageCell.image!)
         return cell
     }
     
