@@ -39,6 +39,11 @@ class HomeViewController: UIViewController,
         }
     }
     
+    @IBAction func LogoutButtonClicked(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: "isSuccessfulLogin");
+        UserDefaults.standard.synchronize();
+        self.performSegue(withIdentifier: "logout", sender: self)
+    }
     @IBAction func CameraAction(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera){
             let imagePicker = UIImagePickerController()

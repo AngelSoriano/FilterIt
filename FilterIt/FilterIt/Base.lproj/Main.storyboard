@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Wbs-qN-WSQ">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Wbs-qN-WSQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -60,6 +60,9 @@
                                 <state key="normal" title="Log Out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="LogoutButtonClicked:" destination="kNo-IO-hHu" eventType="touchUpInside" id="aRY-ga-XkS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -67,11 +70,12 @@
                     <navigationItem key="navigationItem" id="bkn-Zb-dZl"/>
                     <connections>
                         <segue destination="Qze-Hv-uun" kind="presentation" identifier="sendImage" id="9aw-60-ltX"/>
+                        <segue destination="tEd-QW-haZ" kind="presentation" identifier="logout" id="eZ7-DQ-nl9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WDq-Te-Fas" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="-588"/>
+            <point key="canvasLocation" x="-608" y="-954"/>
         </scene>
         <!--Login View-->
         <scene sceneID="P4h-TM-rhM">
@@ -108,17 +112,20 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="LoginClicked:" destination="tEd-QW-haZ" eventType="touchUpInside" id="TLi-Im-hb7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEy-cV-n4g">
                                 <rect key="frame" x="16" y="241" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Register">
+                                <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="tx0-lw-fTp" kind="presentation" identifier="registerView" id="iu7-8h-Qc5"/>
+                                    <segue destination="tx0-lw-fTp" kind="presentation" id="L7r-Bo-3cP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FilterIt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euW-7Z-Djf">
@@ -132,16 +139,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="loginButton" destination="EnE-cq-9hN" id="NoB-3z-YS2"/>
                         <outlet property="passwordTextField" destination="jFl-DQ-Yrw" id="10h-ZS-0WK"/>
-                        <outlet property="registerButton" destination="TEy-cV-n4g" id="2Yn-ZV-vny"/>
                         <outlet property="usernameTextField" destination="RhV-IQ-O1Q" id="eVI-rn-ydE"/>
-                        <segue destination="kNo-IO-hHu" kind="presentation" id="U9Z-W7-yf1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBx-NE-WMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="-588"/>
+            <point key="canvasLocation" x="-607" y="-14"/>
         </scene>
         <!--Registration View-->
         <scene sceneID="tDr-B5-ypZ">
@@ -183,12 +187,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bfz-nj-Jh5">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Bfz-nj-Jh5">
                                 <rect key="frame" x="14" y="170" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Re-Enter Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAg-Jb-gTG">
                                 <rect key="frame" x="16" y="208" width="146" height="21"/>
@@ -197,12 +201,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dHd-Rd-Ln1">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dHd-Rd-Ln1">
                                 <rect key="frame" x="16" y="237" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4G-Tg-YVl">
                                 <rect key="frame" x="16" y="318" width="338" height="30"/>
@@ -212,6 +216,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="CancelButtonClicked:" destination="tx0-lw-fTp" eventType="touchUpInside" id="Fu6-0e-SNl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMS-3x-FDC">
                                 <rect key="frame" x="16" y="280" width="338" height="30"/>
@@ -221,14 +228,22 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="RegisterButtonClicked:" destination="tx0-lw-fTp" eventType="touchUpInside" id="805-lM-mkV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="repeatPasswordTextField" destination="dHd-Rd-Ln1" id="bUu-Tm-n6C"/>
+                        <outlet property="userPasswordTextField" destination="Bfz-nj-Jh5" id="Wgh-47-gtG"/>
+                        <outlet property="usernameTextField" destination="d6B-IJ-neV" id="ymT-ds-ji5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15n-Ka-tsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="169"/>
+            <point key="canvasLocation" x="193" y="-15"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="Zrr-3A-zLv">
@@ -274,7 +289,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="81g-E4-UrR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="-587"/>
+            <point key="canvasLocation" x="48" y="-955"/>
         </scene>
         <!--Filtered Controller-->
         <scene sceneID="MTC-cP-Q7r">
@@ -324,7 +339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DGd-XF-Fpt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2684" y="-588"/>
+            <point key="canvasLocation" x="658" y="-956"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="62W-Fw-FkP">
@@ -353,11 +368,12 @@
                     <navigationItem key="navigationItem" id="x8b-4L-D4U"/>
                     <connections>
                         <segue destination="tEd-QW-haZ" kind="presentation" identifier="loginView" id="eKd-5Y-jdw"/>
+                        <segue destination="kNo-IO-hHu" kind="presentation" identifier="StraightToHome" id="5Wy-Da-oCW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CMY-O2-jpf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-796" y="-589"/>
+            <point key="canvasLocation" x="-1444" y="-591"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dQh-Xp-1fm">
@@ -375,10 +391,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="It4-93-TFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1681" y="-590"/>
+            <point key="canvasLocation" x="-2185" y="-591"/>
         </scene>
     </scenes>
     <resources>
         <image name="Default.png" width="320" height="480"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="eZ7-DQ-nl9"/>
+    </inferredMetricsTieBreakers>
 </document>

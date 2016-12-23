@@ -20,8 +20,18 @@ class SplashViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isSuccessfulLogin")
+        
+        if(!isUserLoggedIn){
         self.performSegue(withIdentifier: "loginView", sender: self)
+        }
+        else{
+            self.performSegue(withIdentifier: "StraightToHome", sender: self)
+        }
+       
     }
+        
     
 
     /*

@@ -14,7 +14,6 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
     @IBOutlet weak var repeatPasswordTextField: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -22,9 +21,12 @@ class RegistrationViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    @IBAction func registerButtonClick(_ sender: Any) {
-        
+
+    @IBAction func CancelButtonClicked(_ sender: Any) {
+    self.dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func RegisterButtonClicked(_ sender: Any) {
         let username = usernameTextField.text;
         let userPassword = userPasswordTextField.text;
         let userRepeatPassword = repeatPasswordTextField.text;
@@ -55,8 +57,8 @@ class RegistrationViewController: UIViewController {
         }
         myAlert.addAction(okAction);
         self.present(myAlert, animated: true, completion:nil);
-        
     }
+
     
     func displayMyAlertMessage(userMessage: String){
         let myAlert = UIAlertController(title:"Alert", message:userMessage, preferredStyle: UIAlertControllerStyle.alert);
