@@ -11,6 +11,13 @@
 		3EC25F6B1E088F730069CCD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EC25F6A1E088F730069CCD1 /* Assets.xcassets */; };
 		3EC25F6E1E088F730069CCD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EC25F6C1E088F730069CCD1 /* LaunchScreen.storyboard */; };
 		3EC25F791E088F730069CCD1 /* FilterItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC25F781E088F730069CCD1 /* FilterItUITests.swift */; };
+		8057AB401E0B7C9B00A7AE6E /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8057AB3D1E0B7C9B00A7AE6E /* CollectionViewController.swift */; };
+		8057AB411E0B7C9B00A7AE6E /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8057AB3E1E0B7C9B00A7AE6E /* FilterCell.swift */; };
+		8057AB421E0B7C9B00A7AE6E /* FilteredController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8057AB3F1E0B7C9B00A7AE6E /* FilteredController.swift */; };
+		8057AB441E0B7C9F00A7AE6E /* FilterSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8057AB431E0B7C9F00A7AE6E /* FilterSample.swift */; };
+		806270E01E0C85C600E4EC72 /* FilterIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 806270DE1E0C85C600E4EC72 /* FilterIt.xcdatamodeld */; };
+		806270E21E0C85CC00E4EC72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806270E11E0C85CC00E4EC72 /* ViewController.swift */; };
+		806270E41E0C85D200E4EC72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806270E31E0C85D200E4EC72 /* AppDelegate.swift */; };
 		E509D52C1E0B483C00E34A6F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509D52B1E0B483C00E34A6F /* LoginViewController.swift */; };
 		E509D5301E0B682100E34A6F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509D52F1E0B682100E34A6F /* HomeViewController.swift */; };
 		E509D5321E0B6A4300E34A6F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509D5311E0B6A4300E34A6F /* RegistrationViewController.swift */; };
@@ -40,6 +47,13 @@
 		3EC25F741E088F730069CCD1 /* FilterItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FilterItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC25F781E088F730069CCD1 /* FilterItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItUITests.swift; sourceTree = "<group>"; };
 		3EC25F7A1E088F730069CCD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8057AB3D1E0B7C9B00A7AE6E /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		8057AB3E1E0B7C9B00A7AE6E /* FilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		8057AB3F1E0B7C9B00A7AE6E /* FilteredController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredController.swift; sourceTree = "<group>"; };
+		8057AB431E0B7C9F00A7AE6E /* FilterSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterSample.swift; sourceTree = "<group>"; };
+		806270DF1E0C85C600E4EC72 /* FilterIt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FilterIt.xcdatamodel; sourceTree = "<group>"; };
+		806270E11E0C85CC00E4EC72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = FilterIt/ViewController.swift; sourceTree = "<group>"; };
+		806270E31E0C85D200E4EC72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = FilterIt/AppDelegate.swift; sourceTree = "<group>"; };
 		E509D52B1E0B483C00E34A6F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E509D52F1E0B682100E34A6F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E509D5311E0B6A4300E34A6F /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +80,9 @@
 		3EC25F541E088F720069CCD1 = {
 			isa = PBXGroup;
 			children = (
+				806270E31E0C85D200E4EC72 /* AppDelegate.swift */,
+				806270E11E0C85CC00E4EC72 /* ViewController.swift */,
+				806270DE1E0C85C600E4EC72 /* FilterIt.xcdatamodeld */,
 				3EC25F5F1E088F720069CCD1 /* FilterIt */,
 				3EC25F771E088F730069CCD1 /* FilterItUITests */,
 				3EC25F5E1E088F720069CCD1 /* Products */,
@@ -84,6 +101,10 @@
 		3EC25F5F1E088F720069CCD1 /* FilterIt */ = {
 			isa = PBXGroup;
 			children = (
+				8057AB3D1E0B7C9B00A7AE6E /* CollectionViewController.swift */,
+				8057AB3E1E0B7C9B00A7AE6E /* FilterCell.swift */,
+				8057AB3F1E0B7C9B00A7AE6E /* FilteredController.swift */,
+				8057AB431E0B7C9F00A7AE6E /* FilterSample.swift */,
 				3EC25F601E088F720069CCD1 /* AppDelegate.swift */,
 				3EC25F621E088F720069CCD1 /* ViewController.swift */,
 				3EC25F641E088F720069CCD1 /* Main.storyboard */,
@@ -210,12 +231,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5AC90511E0C85EF0024F6B6 /* AppDelegate.swift in Sources */,
-				E5AC90501E0C85B10024F6B6 /* ViewController.swift in Sources */,
 				8057AB401E0B7C9B00A7AE6E /* CollectionViewController.swift in Sources */,
 				8057AB421E0B7C9B00A7AE6E /* FilteredController.swift in Sources */,
 				8057AB441E0B7C9F00A7AE6E /* FilterSample.swift in Sources */,
+				806270E21E0C85CC00E4EC72 /* ViewController.swift in Sources */,
 				8057AB411E0B7C9B00A7AE6E /* FilterCell.swift in Sources */,
+				806270E41E0C85D200E4EC72 /* AppDelegate.swift in Sources */,
+				806270E01E0C85C600E4EC72 /* FilterIt.xcdatamodeld in Sources */,
 				E509D5321E0B6A4300E34A6F /* RegistrationViewController.swift in Sources */,
 				E509D52C1E0B483C00E34A6F /* LoginViewController.swift in Sources */,
 				E509D5301E0B682100E34A6F /* HomeViewController.swift in Sources */,
@@ -443,6 +465,17 @@
 			);
 			currentVersion = 3EC25F681E088F730069CCD1 /* FilterIt.xcdatamodel */;
 			path = FilterIt.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		806270DE1E0C85C600E4EC72 /* FilterIt.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				806270DF1E0C85C600E4EC72 /* FilterIt.xcdatamodel */,
+			);
+			currentVersion = 806270DF1E0C85C600E4EC72 /* FilterIt.xcdatamodel */;
+			name = FilterIt.xcdatamodeld;
+			path = FilterIt/FilterIt.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

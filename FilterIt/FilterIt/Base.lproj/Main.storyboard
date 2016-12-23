@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bLe-kI-xEq">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bLe-kI-xEq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -36,6 +36,9 @@
                                 <state key="normal" title="Take a Picture">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="CameraAction:" destination="kNo-IO-hHu" eventType="touchUpInside" id="W6a-kR-eLv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uvd-1m-tpM">
                                 <rect key="frame" x="16" y="182" width="343" height="30"/>
@@ -45,6 +48,9 @@
                                 <state key="normal" title="Use Existing Photo">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="CameraRoll:" destination="kNo-IO-hHu" eventType="touchUpInside" id="QJg-EC-1Lf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KF-I5-8nd">
                                 <rect key="frame" x="16" y="220" width="343" height="30"/>
@@ -61,62 +67,12 @@
                     <navigationItem key="navigationItem" id="bkn-Zb-dZl"/>
                     <connections>
                         <segue destination="tEd-QW-haZ" kind="presentation" identifier="loginView" id="KMJ-NA-eBW"/>
+                        <segue destination="Qze-Hv-uun" kind="presentation" identifier="sendImage" id="9aw-60-ltX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WDq-Te-Fas" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-153" y="-592"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FilterIt" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mlA-jY-gIF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddl-Xg-V6u">
-                                <rect key="frame" x="319" y="20" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="saveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fks-uV-paC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXx-2R-H4T">
-                                <rect key="frame" x="148" y="629" width="79" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Camera roll"/>
-                                <connections>
-                                    <action selector="cameraRoll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t2P-8a-8G3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0UR-ic-6lt">
-                                <rect key="frame" x="171" y="591" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="click"/>
-                                <connections>
-                                    <action selector="cameraAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t7q-Mu-zCX"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <connections>
-                        <outlet property="pickedImage" destination="mlA-jY-gIF" id="D7H-gY-0L0"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1896.8" y="-607.64617691154433"/>
         </scene>
         <!--Login View-->
         <scene sceneID="P4h-TM-rhM">
@@ -305,13 +261,20 @@
             </objects>
             <point key="canvasLocation" x="-962" y="-592"/>
         </scene>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
+=======
+>>>>>>> fdaf0a0f89442c81e8a8e173f802bc39337a3eda
         <!--Collection View Controller-->
         <scene sceneID="Zrr-3A-zLv">
             <objects>
                 <collectionViewController id="Qze-Hv-uun" customClass="CollectionViewController" customModule="FilterIt" customModuleProvider="target" sceneMemberID="viewController">
+<<<<<<< HEAD
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6M8-Ia-p46">
+=======
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="6M8-Ia-p46">
+>>>>>>> fdaf0a0f89442c81e8a8e173f802bc39337a3eda
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -351,7 +314,11 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="81g-E4-UrR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="1921" y="109"/>
+=======
+            <point key="canvasLocation" x="1444" y="-1362"/>
+>>>>>>> fdaf0a0f89442c81e8a8e173f802bc39337a3eda
         </scene>
         <!--Filtered Controller-->
         <scene sceneID="MTC-cP-Q7r">
@@ -401,9 +368,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DGd-XF-Fpt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="2721" y="58"/>
         </scene>
 >>>>>>> Stashed changes
+=======
+            <point key="canvasLocation" x="2351" y="-1362"/>
+        </scene>
+>>>>>>> fdaf0a0f89442c81e8a8e173f802bc39337a3eda
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="KMJ-NA-eBW"/>
