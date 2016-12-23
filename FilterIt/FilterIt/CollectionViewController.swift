@@ -12,7 +12,7 @@ private let reuseIdentifier = "Cell"
 
 class CollectionViewController: UICollectionViewController {
     
-    let pic = UIImage()
+    var pic = UIImage()
     var filterArr = [UIImage]()
 
     override func viewDidLoad() {
