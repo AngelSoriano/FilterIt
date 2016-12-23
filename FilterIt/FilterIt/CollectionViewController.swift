@@ -56,6 +56,7 @@ class CollectionViewController: UICollectionViewController {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FilterCell
         cell.imageCell?.image = self.filterArr[indexPath.row]
+        cell.setNeedsDisplay()
         return cell
     }
     
@@ -66,9 +67,9 @@ class CollectionViewController: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "fullView" {
             let indexPaths = self.collectionView!.indexPathsForSelectedItems!
-            let indexPath = indexPaths[0] as IndexPath
+            let indexPath = indexPaths[0] as NSIndexPath
             let vc = segue.destination as! FilteredController
-            vc.filteredImage.image = self.filterArr[indexPath.row]
+            vc.pic = self.filterArr[indexPath.row]
         }
     }
 

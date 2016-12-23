@@ -249,7 +249,7 @@
         <scene sceneID="Zrr-3A-zLv">
             <objects>
                 <collectionViewController id="Qze-Hv-uun" customClass="CollectionViewController" customModule="FilterIt" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="6M8-Ia-p46">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6M8-Ia-p46">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -260,7 +260,7 @@
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="FilterCell" reuseIdentifier="cell" id="1dT-wc-5Md" customClass="FilterCell" customModule="FilterIt" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="1dT-wc-5Md" customClass="FilterCell" customModule="FilterIt" customModuleProvider="target">
                                 <rect key="frame" x="10" y="10" width="170" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -326,7 +326,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="saveFilteredImg:" destination="bjJ-nQ-qRa" eventType="touchUpInside" id="ChL-Wj-VEz"/>
+                                    <action selector="saveFilteredImg:" destination="bjJ-nQ-qRa" eventType="touchUpInside" id="sap-d2-OYC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -334,12 +334,12 @@
                     </view>
                     <connections>
                         <outlet property="filteredImage" destination="s8s-uF-U3r" id="iq9-oX-Ltc"/>
-                        <outlet property="saveFilteredImg" destination="xfQ-vb-gmk" id="rMy-Zi-Pah"/>
+                        <segue destination="kNo-IO-hHu" kind="show" identifier="BackToMain" id="qIB-Pd-XqD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DGd-XF-Fpt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="658" y="-956"/>
+            <point key="canvasLocation" x="916" y="-956"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="62W-Fw-FkP">
@@ -399,5 +399,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eZ7-DQ-nl9"/>
+        <segue reference="qIB-Pd-XqD"/>
     </inferredMetricsTieBreakers>
 </document>
