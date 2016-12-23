@@ -13,9 +13,20 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var registerButton: UIButton!
+    
+    @IBAction func LoginButtonClicked(_ sender: Any) {
+        let username = usernameTextField.text
+        let password = passwordTextField.text
+        let usernameStored = UserDefaults.standard.string(forKey: "username");
+        let passwordStored = UserDefaults.standard.string(forKey: "password");
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
 }
