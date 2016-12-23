@@ -17,12 +17,29 @@ class CollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        generateFilters()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(FilterCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
+    }
+    
+    func generateFilters() {
+        
+        for _ in 1...10 {
+            let aRand = CGFloat(arc4random_uniform(191) + 5)
+            let radRand = (aRand / 100.0) * CGFloat.pi
+            let tempImg = CIImage(image: self.pic)
+            let tempFilter = CIFilter(name: "CIHueAdjust")
+            tempFilter?.setDefaults()
+            tempFilter?.setValue(tempImg, forKey: "inputImage")
+            tempFilter?.setValue(CGFloat(radRand), forKey: "inputAngle")
+            let filteredImg = tempFilter?.value(forKey: "outputImage") as! CIImage
+            let filteredUIImage = UIImage(cgImage: CIContext(options: nil).createCGImage(filteredImg, from: filteredImg.extent)!)
+            self.filterArr.append(filteredUIImage)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,10 +53,9 @@ class CollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {return 10}
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FilterCell
-        cell.imageCell?.image = pic
-        cell.setFilter()
-        filterArr.append(cell.imageCell.image!)
+        cell.imageCell?.image = self.filterArr[indexPath.row]
         return cell
     }
     
