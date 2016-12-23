@@ -23,10 +23,6 @@ class FilteredController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func goingBack(_ sender: Any) {
-        _ = self.navigationController?.popViewController(animated: true)
-    }
-    
     @IBAction func saveFilteredImg(_ sender: Any){
         UIImageWriteToSavedPhotosAlbum(self.pic, nil, nil, nil)
         

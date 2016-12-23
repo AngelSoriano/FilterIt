@@ -72,6 +72,9 @@ class CollectionViewController: UICollectionViewController {
             vc.pic = self.filterArr[indexPath.row]
         }
     }
+    
+    @IBAction func returnToCollectionView(segue:UIStoryboardSegue) {
+    }
 
     // MARK: UICollectionViewDelegate
 
