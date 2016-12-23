@@ -21,9 +21,6 @@ class CollectionViewController: UICollectionViewController {
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
-        self.collectionView!.register(FilterCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
     }
     
     func generateFilters() {
@@ -73,7 +70,7 @@ class CollectionViewController: UICollectionViewController {
         }
     }
     
-    @IBAction func returnToCollectionView(segue:UIStoryboardSegue) {
+    @IBAction func cancelToPlayersViewController(segue:UIStoryboardSegue) {
     }
 
     // MARK: UICollectionViewDelegate
