@@ -20,6 +20,15 @@ class LoginViewController: UIViewController {
         let usernameStored = UserDefaults.standard.string(forKey: "username");
         let passwordStored = UserDefaults.standard.string(forKey: "password");
         
+        if(username == usernameStored){
+            if(password == passwordStored){
+                //Successful Login
+                UserDefaults.standard.set(true, forKey: "isSuccessfulLogin");
+                UserDefaults.standard.synchronize();
+                
+            }
+        }
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
