@@ -64,5 +64,4 @@ class HomeViewController: UIViewController,
         self.dismiss(animated: true, completion: nil)
         self.performSegue(withIdentifier: "sendImage", sender: self)
     }
-    
 }
